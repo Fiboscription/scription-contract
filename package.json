@@ -1,0 +1,42 @@
+{
+  "name": "fiboscriptions-hardhat",
+  "scripts": {
+    "compile": "npx hardhat compile && node batch/abi.ts",
+    "node": "npx hardhat node",
+    "test": "npx hardhat test",
+    "coverage": "npx hardhat coverage && npx http-server ./coverage/ -o",
+    "gas": "REPORT_GAS=true npx hardhat test",
+    "abi": "npx hardhat export-abi",
+    "d:l": "npx hardhat run --network localhost scripts/deploy.js",
+    "d:fbchain": "npx hardhat run --network fbchain scripts/deploy.js",
+    "d:oktestchain": "npx hardhat run --network oktest scripts/deploy.js",
+    "remixd": "open http://remix.ethereum.org/ && remixd -s  ./  --remix-ide http://remix.ethereum.org/"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "3.0.0",
+    "@nomicfoundation/hardhat-verify": "1.1.1",
+    "@openzeppelin/hardhat-upgrades": "^3.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "chai": "^4.2.0",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.19.2",
+    "hardhat-abi-exporter": "^2.10.1",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "hardhat-storage-layout": "^0.1.7",
+    "solidity-coverage": "^0.8.0",
+    "typechain": "^8.3.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "4.9.5",
+    "@openzeppelin/contracts-upgradeable": "4.9.5"
+  }
+}
